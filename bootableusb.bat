@@ -98,5 +98,5 @@ exit
 :browse_file
 set ps_cmd=powershell "Add-Type -AssemblyName System.windows.forms|Out-Null;$f=New-Object System.Windows.Forms.OpenFileDialog;$f.Filter='All files (.)|*.*';$f.showHelp=$true;$f.ShowDialog()|Out-Null;$f.FileName"
 for /f "delims=" %%I in ('%ps_cmd%') do set "iso=%%I"
-if "%iso%"=="" echo  & echo Error: Please browse your iso file &timeout 5 >nul &goto :proceed
+if "%iso%"=="" echo  & echo Error: Please browse your ISO file &timeout 5 >nul &goto :proceed
 exit /b
